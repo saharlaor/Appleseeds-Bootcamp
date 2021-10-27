@@ -37,6 +37,37 @@ button {
     font-size: 1.2rem;
     padding: 12px 40px;
 }
+
+.flat-btns .big-btn {
+    background-color: #05b86b;
+    border: 1px solid #05b86b;
+}
+
+.flat-btns .medium-btn {
+    background-color: #fd2728;
+    border: 1px solid #fd2728;
+}
+
+.flat-btns .small-btn {
+    background-color: #0a99e2;
+    border: 1px solid #0a99e2;
+}
+
+.round-btns .big-btn {
+    background-color: #f78401;
+    border: 1px solid #f78401;
+}
+
+.round-btns .medium-btn {
+    background-color: #f7d404;
+    border: 1px solid #f7d404;
+}
+
+.round-btns .small-btn {
+    background-color: #899799;
+    border: 1px solid #899799;
+}
+
 .medium-btn {
     font-size: 1rem;
     padding: 7px 30px;
