@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: rgb(61, 79, 104);
+    text-align: center;
+}
+
+h2 {
+    margin: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+button {
+    margin: 10px;
+    color: inherit;
+    background-color: inherit;
+
+    border-radius: inherit;
+    box-shadow: none;
+}
+
+.flat-btns {
+}
+
+.round-btns {
+    border-radius: 20px;
+}
+
+.big-btn {
+    font-size: 1.2rem;
+    padding: 12px 40px;
+}
+.medium-btn {
+    font-size: 1rem;
+    padding: 7px 30px;
+}
+
+.small-btn {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+}
