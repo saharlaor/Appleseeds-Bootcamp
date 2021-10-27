@@ -1,0 +1,101 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    padding: 1rem;
+    background: rgb(207, 179, 117);
+    color: whitesmoke;
+    text-shadow: 0px 0px 10px lightgray;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px dimgray;
+}
+
+header img {
+    border-radius: 30px;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+main {
+    min-height: 400px;
+    max-height: 600px;
+    height: fit-content;
+    width: 90%;
+    padding: 2rem 5%;
+    margin: 1rem auto;
+}
+
+.card {
+    padding: auto;
+    min-height: 400px;
+    max-height: 600px;
+    height: 100%;
+    background-color: rgb(247, 240, 220);
+    border-radius: 3rem;
+    box-shadow: 0px 5px 10px dimgray;
+    text-align: center;
+}
+
+#about {
+    width: 50%;
+    float: left;
+    font-size: 32px;
+    font-family: "Dosis", sans-serif;
+    text-align: justify;
+
+    border: 1px darkslategray;
+}
+
+#about p {
+    padding: 1rem;
+    margin: 0;
+}
+
+#experience {
+    width: 42.5%;
+    float: right;
+    font-size: 24px;
+    font-family: "Dosis", sans-serif;
+
+    border: 1px darkslategray;
+}
+
+#experience ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+#linux {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 900;
+}
+
+#social_media {
+    display: inline;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#social_media li {
+    display: inline;
+    margin: 0 2rem;
+    font-size: 1.2rem;
+}
+
+footer span {
+    float: right;
+    margin-right: 2rem;
+}
+
+.clr {
+    clear: both;
+    height: 0rem;
+}
