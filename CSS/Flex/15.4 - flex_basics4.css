@@ -1,0 +1,39 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f5ce;
+    height: 50%;
+    width: 30rem;
+    justify-content: space-around;
+}
+
+.box {
+    height: 4rem;
+    width: 4rem;
+}
+
+.box1 {
+    background-color: green;
+}
+
+.box2 {
+    background-color: blue;
+}
+
+.box3 {
+    background-color: red;
+}
