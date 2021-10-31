@@ -1,0 +1,65 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 800px;
+    margin: auto;
+}
+
+header,
+footer {
+    padding: 2rem 0rem;
+    text-align: center;
+    margin: 1% auto;
+}
+
+header {
+    background-color: rgb(232, 167, 72);
+}
+
+footer {
+    background-color: rgb(64, 100, 241);
+}
+
+main,
+aside {
+    padding: 1% 1% 50% 1%;
+    height: 85%;
+}
+
+aside {
+    float: left;
+    width: 29%;
+    text-align: left;
+    background-color: rgb(84, 128, 38);
+}
+
+main {
+    float: right;
+    width: 69%;
+    text-align: right;
+    background-color: rgb(116, 60, 118);
+}
+
+.clr {
+    clear: both;
+    height: 0rem;
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+}
