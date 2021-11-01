@@ -1,0 +1,24 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 40px;
+}
+
+span:hover {
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+span:hover::before {
+    content: attr(tooltip-data);
+    padding: 0.6rem;
+    background: gold;
+    border: 1px solid black;
+    /* border-radius: 50%; */
+    position: absolute;
+    bottom: 1.5rem;
+}
