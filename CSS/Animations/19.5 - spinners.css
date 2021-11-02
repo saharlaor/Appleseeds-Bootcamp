@@ -1,0 +1,131 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: #000;
+    height: 100%;
+}
+
+.loader {
+    margin: 3rem;
+}
+
+.full-spinner,
+.ghost-spinner {
+    flex-shrink: 0;
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.full-spinner {
+    position: relative;
+    border: 3px solid #777;
+    border-top: 3px solid #3fd;
+    animation: 1s linear 0s infinite running reverse spin;
+}
+
+.ghost-spinner {
+    position: relative;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #3fd;
+
+    animation: 1s linear 0s infinite running reverse spin;
+    border-radius: 50%;
+}
+
+.static-dots,
+.animated-dots {
+    flex-shrink: 0;
+    display: flex;
+    height: 5rem;
+    width: 6rem;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.static-dots .dot:first-child,
+.animated-dots .dot:first-child,
+.static-dots .dot:nth-child(2),
+.animated-dots .dot:nth-child(2),
+.static-dots .dot:last-child,
+.animated-dots .dot:last-child {
+    animation: ease-in-out infinite running reverse;
+}
+
+.static-dots .dot:first-child,
+.static-dots .dot:nth-child(2),
+.static-dots .dot:last-child {
+    animation-name: dots;
+    animation-duration: 1s;
+}
+
+.static-dots .dot:first-child {
+    animation-delay: 0;
+}
+.static-dots .dot:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.static-dots .dot:last-child {
+    animation-delay: 0.8s;
+}
+
+.animated-dots .dot:first-child,
+.animated-dots .dot:nth-child(2),
+.animated-dots .dot:last-child {
+    animation-name: dots-hops;
+    animation-duration: 0.9s;
+}
+
+.animated-dots .dot:first-child {
+    animation-delay: 0;
+}
+.animated-dots .dot:nth-child(2) {
+    animation-delay: 0.25s;
+}
+.animated-dots .dot:last-child {
+    animation-delay: 0.5s;
+}
+
+.dot {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background: #3fd;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dots {
+    30% {
+        background: #777;
+    }
+
+    80% {
+        background: #777;
+    }
+}
+
+@keyframes dots-hops {
+    30% {
+        transform: translateY(-1rem);
+    }
+    60% {
+        transform: translateY(0);
+    }
+}
