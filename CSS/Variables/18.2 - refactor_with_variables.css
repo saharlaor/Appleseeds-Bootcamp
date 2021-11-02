@@ -1,0 +1,115 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linux-weight: 900;
+    --border-dark: 1px solid darkslategray;
+    --min-width-experience: 310px;
+    --min-width-about: 410px;
+}
+
+header,
+footer {
+    padding: 1rem;
+    background: rgb(207, 179, 117);
+    color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px dimgray;
+}
+
+header img {
+    border-radius: 30px;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+main {
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1080px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgb(247, 240, 220);
+    border-radius: 3rem;
+    box-shadow: 0px 5px 10px dimgray;
+    text-align: center;
+}
+
+#about {
+    flex-basis: var(--min-width-about);
+    font-size: 1.75rem;
+    font-family: "Dosis", sans-serif;
+    text-align: justify;
+
+    border: var(--border-dark);
+}
+
+#about p {
+    margin: 0;
+}
+
+#experience {
+    flex-basis: var(--min-width-experience);
+    font-size: 1.5rem;
+    font-family: "Dosis", sans-serif;
+
+    border: var(--border-dark);
+}
+
+#experience ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+#linux {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: var(--linux-weight);
+}
+
+#social_media {
+    display: inline;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#social_media li {
+    display: inline;
+    margin: 0 2rem;
+    font-size: 1.2rem;
+}
+
+footer span {
+    float: right;
+    margin-right: 2rem;
+}
+
+.clr {
+    clear: both;
+    height: 0rem;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
