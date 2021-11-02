@@ -57,6 +57,16 @@
     z-index: -1;
 }
 
+.translate-y::before {
+    content: "YEAH!";
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background: red;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
 .rotate:hover::before {
     transform: rotate(0deg);
 }
@@ -64,3 +74,12 @@
 .translate:hover {
     color: white;
 }
+
+.translate:hover::before {
+    transform: translateX(0);
+}
+
+.translate-y:hover::before {
+    transform: translateY(0);
+}
+
