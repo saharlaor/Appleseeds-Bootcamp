@@ -67,6 +67,15 @@
     vertical-align: middle;
     align-content: center;
 }
+
+.scale-opacity::before {
+    content: "Scale & Opacity";
+    background: #2d2c2e;
+    transform: scale(3);
+    opacity: 0;
+    color: white;
+}
+
 .rotate:hover::before {
     transform: rotate(0deg);
 }
@@ -83,3 +92,7 @@
     transform: translateY(0);
 }
 
+.scale-opacity:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
