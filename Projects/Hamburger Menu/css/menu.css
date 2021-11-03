@@ -1,3 +1,4 @@
+/* Menu Wrapper */
 .menu-wrapper {
     position: fixed;
     top: 0;
@@ -5,10 +6,10 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-    background: var(--overlay-color);
     color: #fff;
 }
 
+/* Hamburger */
 .menu-wrapper .toggler {
     position: absolute;
     top: 0;
@@ -34,6 +35,7 @@
     background: var(--primary-color);
 }
 
+/* Hamburger and X */
 .hamburger > div {
     display: flex;
     justify-content: center;
@@ -81,26 +83,70 @@
     transform: rotate(180deg);
 }
 
+/* Menu */
 .menu {
     display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.menu-wrapper .menu > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    height: 350vh;
+    width: 350vw;
+    background: var(--overlay-color);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrapper .menu > div > div {
+    text-align: center;
+    max-width: 90vh;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrapper .menu > div > div > ul {
+    text-align: center;
     list-style-type: none;
 }
 
-.menu__item {
+.menu-wrapper .menu > div > div > ul > .menu__item {
     width: 100%;
-    font-size: 2rem;
-    margin: 0.5rem 0;
+    padding: 1rem;
 }
 
-.menu__item a {
+.menu-wrapper .menu > div > div > ul > .menu__item > a {
     color: inherit;
-    height: 100%;
-    width: 100%;
-    padding: 1rem 40%;
+    text-align: center;
     text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: color 0.4s ease;
+}
+
+.menu-wrapper .menu > div > div > ul > .menu__item > a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-wrapper .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrapper .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrapper .toggler:checked ~ .menu > div > div {
+    opacity: 1;
 }
