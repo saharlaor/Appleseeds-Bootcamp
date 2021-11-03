@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 2rem;
+}
+
+.cell {
+    height: 7rem;
+    border-radius: 1.5rem;
+}
+
+.cell1 {
+    background: #f00;
+    grid-column: 1 / span 2;
+}
+
+.cell2 {
+    background: #00f;
+    grid-column: 3 / span 2;
+}
+
+.cell3 {
+    background: #060;
+}
+
+.cell4 {
+    background: #606;
+    grid-column: 2 / span 3;
+}
+
+.cell5 {
+    background: #f0e41e;
+    grid-column: 1 / span 4;
+}
