@@ -1,0 +1,90 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "i1  i1  i2  i2  i2  i3  i4  i4"
+        "i1  i1  i2  i2  i2  i3  i4  i4"
+        "i5  i5  i2  i2  i2  i6  i6  i7"
+        "i5  i5  i8  i8  i9  i6  i6  i7"
+        "i5  i5  i8  i8  i10 i10 i10 i7"
+        "i11 i12 i12 i13 i10 i10 i10 i14"
+        "i11 i12 i12 i13 i10 i10 i10 i14";
+    grid-gap: 0.5rem;
+    width: 100vh;
+    padding: 2rem;
+}
+
+.gallery-img > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-1 {
+    grid-area: i1;
+}
+.img-2 {
+    grid-area: i2;
+}
+.img-3 {
+    grid-area: i3;
+}
+.img-4 {
+    grid-area: i4;
+}
+.img-5 {
+    grid-area: i5;
+}
+.img-6 {
+    grid-area: i6;
+}
+.img-7 {
+    grid-area: i7;
+}
+.img-8 {
+    grid-area: i8;
+}
+.img-9 {
+    grid-area: i9;
+}
+.img-10 {
+    grid-area: i10;
+}
+.img-11 {
+    grid-area: i11;
+}
+.img-12 {
+    grid-area: i12;
+}
+.img-13 {
+    grid-area: i13;
+}
+.img-14 {
+    grid-area: i14;
+}
+/* 
+@media (max-width: 500px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "sidebar2"
+            "footer";
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 501px) {
+    .container {
+        grid-template-areas:
+            "header  header  header  header"
+            "sidebar content content content"
+            "sidebar2 sidebar2 sidebar2 sidebar2"
+            "footer  footer  footer  footer";
+    }
+} */
