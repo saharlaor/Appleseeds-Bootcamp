@@ -47,7 +47,7 @@ gotIt = "He's got it!";
  */
 var bill = 356.2;
 var tax = 17;
-var total = bill * (tax / 100);
+var total = bill * (tax / 100 + 1);
 console.log(`Your total bill is ${total}`);
 
 // Round the number 50.6 to its nearest integer
