@@ -11,7 +11,7 @@ const steps = (num) => {
     // }
     let step = new Array(num).fill(" ");
     for (let i = 0; step.indexOf(" ") !== -1; i++) {
-        step[step.indexOf(" ")] = "#";
+        step[i] = "#";
         console.log(`'${step.join("")}'`);
     }
 };
