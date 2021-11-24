@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Header</h1>
+        <p>Paragraph</p>
+        <a href="#">link</a>
+        <img src="" alt="" />
+        <div class="x">Div with a class</div>
+        <div id="y">Div with an id</div>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+    </body>
+    <script>
+        // // No QuerySelector
+        // let h1 = document.getElementsByTagName('h1')[0];
+        // let p = document.getElementsByTagName('p')[0];
+        // let a = document.getElementsByTagName('a')[0];
+        // let img = document.getElementsByTagName('img')[0];
+        // let x = document.getElementsByClassName('x')[0];
+        // let y = document.getElementById('y');
+        // let input1 = document.getElementsByTagName('input')[0];
+        // let input2 = document.getElementsByTagName('input')[1];
+        // let input3 = document.getElementsByTagName('input')[2];
+        // console.log(h1, p, a, img, x, y, input1, input2, input3);
+
+        // With QuerySelector
+        // let h1 = document.querySelector('h1');
+        // let p = document.querySelector('p');
+        // let a = document.querySelector('a');
+        // let img = document.querySelector('img');
+        // let x = document.querySelector('.x');
+        // let y = document.querySelector('#y');
+        // let [input1, input2, input3] = document.querySelectorAll('input');
+        // console.log(h1, p, a, img, x, y, input1, input2, input3);
+
+        // Iterate over all input objects
+        // Using QuerySelector
+        // let inputs = document.querySelectorAll('input');
+        // inputs.forEach(el => console.log(el))
+
+        // Using GetElementsByTagName
+        let inputs = Array.from(document.getElementsByTagName('input'));
+        inputs.forEach(el => console.log("GetBy: ", el))
+        console.log(inputs);
+    </script>
+
+</html>
