@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Area</title>
+    </head>
+
+    <body>
+        <form action="">
+            <label for="text-area">Why are you interested in this position?</label>
+            <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea>
+            <button>Click me!</button>
+        </form>
+        <span class="hidden-message">You are not worthy! you barely entered anything</span>
+        <script>
+            let form = document.querySelector("form");
+            let btn = document.querySelector("button");
+            let textArea = document.querySelector("#text-area");
+            let hiddenMessage = document.querySelector(".hidden-message");
+            form.style.display = "flex";
+            form.style.flexDirection = "column";
+            hiddenMessage.style.visibility = "hidden";
+
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                hiddenMessage.style.visibility = (textArea.value.split(" ").length < 100) ? "visible" : "hidden";
+                console.log(textArea.value.split(" ").length < 100);
+            })
+        </script>
+    </body>
+
+</html>
