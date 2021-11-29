@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lightbulb</title>
+    </head>
+
+    <body>
+        <img src="https://lh3.googleusercontent.com/proxy/_cnpFfcMfCAceJvVD_mVcyuZK3A0XJcyT8NXVfrJkOKAbygwqwOkurdzC_WI3LvP0bRMnuqGYqhvlQPWJ2ETiKFSYmIYfO_dvzYyK5qLcuk8HjhTzn83GGPCloyx-q60f_jCyozCVQRJgJEl-NnESA"
+            alt="Lightbulb" class="lightbulb">
+        <script>
+            document.body.style.display = "flex";
+            document.body.style.justifyContent = "center";
+
+            let lightbulb = document.querySelector(".lightbulb");
+            lightbulb.style.height = "150px";
+            lightbulb.style.width = "150px";
+            lightbulb.style.objectFit = "cover";
+            lightbulb.style.objectPosition = "right";
+            lightbulb.addEventListener("click", e => lightbulb.style.objectPosition = lightbulb.style.objectPosition === "right center" ? "left center" : "right center")
+            lightbulb.addEventListener("click", e => console.log("wow"))
+        </script>
+    </body>
+
+</html>
