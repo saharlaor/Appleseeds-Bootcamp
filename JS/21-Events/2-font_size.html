@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Font Size</title>
+        <style>
+            .sizers {
+                display: flex;
+                gap: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="text">Some text or other</div>
+        <div class="sizers">
+            <button>-</button>
+            <button>+</button>
+        </div>
+
+        <script>
+            let text = document.querySelector(".text");
+            text.style.fontSize = text.style.fontSize || "16px";
+
+            let btns = document.querySelectorAll("button");
+            btns.forEach(btn =>
+                btn.addEventListener("click", e => {
+                    let font = Number(text.style.fontSize.slice(0, -2));
+                    if (btn.innerText === "+") {
+                        text.style.fontSize = font < 100 ? (font + 1).toString() + "px" : text.style.fontSize;
+                    } else {
+                        text.style.fontSize = font > 6 ? (font - 1).toString() + "px" : text.style.fontSize;
+                    }
+                }));
+        </script>
+    </body>
+
+</html>
