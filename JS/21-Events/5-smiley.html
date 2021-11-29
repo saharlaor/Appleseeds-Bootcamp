@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smiley</title>
+    </head>
+
+    <body>
+        <input type="text" name="amount" id="amount">
+        <button>submit</button>
+        <div class="smileys"></div>
+        <script>
+            let amount = document.querySelector("#amount");
+            let smileys = document.querySelector(".smileys");
+            smileys.style.fontSize = "75px";
+            document.querySelector("button").addEventListener('click', e => {
+                if (/[0-9]+/.test(amount.value) && Number.isInteger(parseFloat(amount.value))) {
+                    smileys.innerHTML = "🥸".repeat(amount.value);
+                } else {
+                    alert("You can only enter a natural number");
+                }
+            })
+        </script>
+    </body>
+
+</html>
