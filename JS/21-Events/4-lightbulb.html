@@ -14,14 +14,17 @@
         <script>
             document.body.style.display = "flex";
             document.body.style.justifyContent = "center";
+            document.body.style.backgroundColor = "#000"
 
             let lightbulb = document.querySelector(".lightbulb");
             lightbulb.style.height = "150px";
             lightbulb.style.width = "150px";
             lightbulb.style.objectFit = "cover";
             lightbulb.style.objectPosition = "right";
-            lightbulb.addEventListener("click", e => lightbulb.style.objectPosition = lightbulb.style.objectPosition === "right center" ? "left center" : "right center")
-            lightbulb.addEventListener("click", e => console.log("wow"))
+            lightbulb.addEventListener("click", e => {
+                lightbulb.style.objectPosition = lightbulb.style.objectPosition === "right center" ? "left center" : "right center";
+                document.body.style.backgroundColor = lightbulb.style.objectPosition === "right center" ? "#000" : "#fff";
+            })
         </script>
     </body>
 
