@@ -1,18 +1,23 @@
-import { getInputDirection } from "./input.js";
+import { getDifficulty, getInputDirection } from "./input.js";
 
-export let difficulty = {
-    speed: 0,
-    growth: 0,
-};
+let growthCount = 0;
 
 const snakeBody = [{ x: 11, y: 11 }];
 
 export function update(grow) {
+    if (grow) growthCount = getDifficulty().growth;
     const direction = getInputDirection();
+    if (!(direction.x + direction.y)) {
+        return;
+    }
     snakeBody.unshift({ ...snakeBody[0] });
     snakeBody[0].x = snakeBody[0].x + direction.x;
     snakeBody[0].y = snakeBody[0].y + direction.y;
-    if (!grow) snakeBody.pop();
+    if (!growthCount) {
+        snakeBody.pop();
+    } else {
+        growthCount--;
+    }
     return direction;
 }
 
