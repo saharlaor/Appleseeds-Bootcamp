@@ -1,15 +1,15 @@
 import { getInputDirection } from "./input.js";
 
-export const SNAKE_SPEED = 5;
+export const SNAKE_SPEED = 15;
 
 const snakeBody = [{ x: 11, y: 11 }];
 
-export function update() {
+export function update(grow) {
     const direction = getInputDirection();
     snakeBody.unshift({ ...snakeBody[0] });
     snakeBody[0].x = snakeBody[0].x + direction.x;
     snakeBody[0].y = snakeBody[0].y + direction.y;
-    snakeBody.pop();
+    if (!grow) snakeBody.pop();
 }
 
 export function draw(gameBoard) {
