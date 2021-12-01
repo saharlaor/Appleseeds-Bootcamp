@@ -11,7 +11,6 @@ let lastRenderTime = 0;
 
 const gameBoard = document.querySelector("#game-board");
 let grow = false;
-let currentDirection;
 
 function main(currentTime) {
     const deathStatus = checkDeath();
@@ -33,7 +32,7 @@ function main(currentTime) {
 }
 
 function update(grow) {
-    currentDirection = updateSnake(grow, currentDirection);
+    updateSnake(grow);
     return updateFood();
 }
 
