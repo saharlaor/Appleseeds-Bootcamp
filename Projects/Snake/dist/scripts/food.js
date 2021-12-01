@@ -1,11 +1,13 @@
+import { getSnakeHead } from "./snake.js";
+
 const food = { x: 1, y: 1 };
 
 export function update() {
-    // const direction = getInputDirection();
-    // snakeBody.unshift({ ...snakeBody[0] });
-    // snakeBody[0].x = snakeBody[0].x + direction.x;
-    // snakeBody[0].y = snakeBody[0].y + direction.y;
-    // snakeBody.pop();
+    if (JSON.stringify(getSnakeHead()) === JSON.stringify(food)) {
+        randomizeLocation();
+        return true;
+    }
+    return false;
 }
 
 export function draw(gameBoard) {
@@ -14,4 +16,9 @@ export function draw(gameBoard) {
     foodEl.style.gridRowStart = food.y;
     foodEl.classList.add("food");
     gameBoard.appendChild(foodEl);
+}
+
+function randomizeLocation() {
+    food.x = Math.ceil(Math.random() * 21);
+    food.y = Math.ceil(Math.random() * 21);
 }

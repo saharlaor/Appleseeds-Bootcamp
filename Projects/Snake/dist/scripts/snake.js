@@ -1,6 +1,6 @@
 import { getInputDirection } from "./input.js";
 
-export const SNAKE_SPEED = 1;
+export const SNAKE_SPEED = 5;
 
 const snakeBody = [{ x: 11, y: 11 }];
 
@@ -20,4 +20,8 @@ export function draw(gameBoard) {
         snakeEl.classList.add("snake");
         gameBoard.appendChild(snakeEl);
     });
+}
+
+export function getSnakeHead() {
+    return snakeBody[0];
 }
