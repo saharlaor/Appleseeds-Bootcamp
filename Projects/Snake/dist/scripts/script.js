@@ -5,10 +5,13 @@ import {
     SNAKE_SPEED,
 } from "./snake.js";
 import { update as updateFood, draw as drawFood } from "./food.js";
+import { changeDirection } from "./input.js";
 
 let lastRenderTime = 0;
+
 const gameBoard = document.querySelector("#game-board");
 let grow = false;
+let currentDirection;
 
 function main(currentTime) {
     const deathStatus = checkDeath();
@@ -24,12 +27,13 @@ function main(currentTime) {
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
     lastRenderTime = currentTime;
 
+    window.addEventListener("keydown", changeDirection);
     grow = update(grow);
     draw();
 }
 
 function update(grow) {
-    updateSnake(grow);
+    currentDirection = updateSnake(grow, currentDirection);
     return updateFood();
 }
 

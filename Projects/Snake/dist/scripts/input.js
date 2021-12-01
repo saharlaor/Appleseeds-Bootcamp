@@ -6,13 +6,15 @@ const DIRECTIONS = {
 };
 let inputDirection = DIRECTIONS["ArrowRight"];
 
-window.addEventListener("keydown", (e) => {
+export function changeDirection(e) {
     const tempDirection = DIRECTIONS[e.key];
 
     // If the arrow changes the direction to the other make change
     Math.abs(inputDirection.x) - Math.abs(tempDirection.x) &&
         (inputDirection = DIRECTIONS[e.key]);
-});
+
+    window.removeEventListener("keydown", changeDirection);
+}
 
 export function getInputDirection() {
     return inputDirection;
