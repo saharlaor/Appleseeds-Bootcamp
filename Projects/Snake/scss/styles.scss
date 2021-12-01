@@ -1,0 +1,73 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$black-0: #000;
+$black-1: #111;
+$black-2: #222;
+$black-3: #333;
+$dark-grey-4: #444;
+$dark-grey-5: #555;
+$dark-grey-6: #666;
+$dark-grey-7: #777;
+$light-grey-8: #888;
+$light-grey-9: #999;
+$light-grey-a: #aaa;
+$light-grey-b: #bbb;
+$white-c: #ccc;
+$white-d: #ddd;
+$white-e: #eee;
+$white-f: #fff;
+
+$snake-color: #2b3;
+$food-color: #d33;
+
+/*******************\
+****** General ******
+\*******************/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    @include flex-center;
+    height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background: $black-2;
+    margin: 0;
+}
+
+/******************\
+****** Blocks ******
+\******************/
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    background-color: $white-c;
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.snake {
+    background-color: $snake-color;
+    border: 0.25vmin solid $black-0;
+}
+
+.food {
+    background-color: $food-color;
+    border: 0.25vmin solid $black-0;
+}
+
+/********************\
+****** Elements ******
+\********************/
+
+/*********************\
+****** Modifiers ******
+\*********************/

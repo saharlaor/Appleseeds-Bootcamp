@@ -1,0 +1,43 @@
+/*******************\
+****** General ******
+\*******************/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  margin: 0; }
+
+/******************\
+****** Blocks ******
+\******************/
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+  background-color: #ccc;
+  width: 100vmin;
+  height: 100vmin; }
+
+.snake {
+  background-color: #2b3;
+  border: 0.25vmin solid #000; }
+
+.food {
+  background-color: #d33;
+  border: 0.25vmin solid #000; }
+
+/********************\
+****** Elements ******
+\********************/
+/*********************\
+****** Modifiers ******
+\*********************/
