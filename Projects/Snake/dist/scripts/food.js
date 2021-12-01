@@ -1,6 +1,7 @@
 import { getSnakeHead, onSnake } from "./snake.js";
 
-const food = { x: 1, y: 1 };
+const food = { x: 0, y: 0 };
+randomizeLocation();
 
 export function update() {
     if (JSON.stringify(getSnakeHead()) === JSON.stringify(food)) {
