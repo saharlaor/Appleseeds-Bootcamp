@@ -25,3 +25,7 @@ export function draw(gameBoard) {
 export function getSnakeHead() {
     return snakeBody[0];
 }
+
+export function getSnakeBody() {
+    return snakeBody;
+}
