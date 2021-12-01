@@ -1,6 +1,9 @@
 import { getInputDirection } from "./input.js";
 
-export const SNAKE_SPEED = 5;
+export let difficulty = {
+    speed: 0,
+    growth: 0,
+};
 
 const snakeBody = [{ x: 11, y: 11 }];
 

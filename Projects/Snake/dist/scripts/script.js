@@ -2,10 +2,9 @@ import {
     update as updateSnake,
     draw as drawSnake,
     checkDeath,
-    SNAKE_SPEED,
 } from "./snake.js";
 import { update as updateFood, draw as drawFood } from "./food.js";
-import { changeDirection } from "./input.js";
+import { changeDirection, getDifficulty, setDifficulty } from "./input.js";
 
 let lastRenderTime = 0;
 
@@ -22,8 +21,14 @@ function main(currentTime) {
     }
 
     window.requestAnimationFrame(main);
+
+    let difficulty = getDifficulty();
+    if (!difficulty.speed) {
+        return;
+    }
+
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
-    if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
+    if (secondsSinceLastRender < 1 / difficulty.speed) return;
     lastRenderTime = currentTime;
 
     window.addEventListener("keydown", changeDirection);
@@ -42,4 +47,7 @@ function draw() {
     drawFood(gameBoard);
 }
 
+document
+    .querySelector(".difficulty__submit")
+    .addEventListener("click", setDifficulty);
 window.requestAnimationFrame(main);

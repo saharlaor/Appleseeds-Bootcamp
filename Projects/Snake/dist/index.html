@@ -12,6 +12,20 @@
 
     <body>
         <div id="game-board"></div>
+        <form id="difficulty-form">
+            <h2>Pick A Difficulty</h2>
+            <div class="difficulty__container">
+                <input type="radio" name="difficulty" id="difficulty__easy" value="Easy" checked><label
+                    for="difficulty__easy">Easy</label>
+                <input type="radio" name="difficulty" id="difficulty__medium" value="Medium"><label
+                    for="difficulty__medium">Medium</label>
+                <input type="radio" name="difficulty" id="difficulty__hard" value="Hard"><label
+                    for="difficulty__hard">Hard</label>
+                <input type="radio" name="difficulty" id="difficulty__hell" value="Hell"><label
+                    for="difficulty__hell">Hell</label>
+            </div>
+            <button type="button" class="difficulty__submit">Play!</button>
+        </form>
     </body>
 
 </html>
