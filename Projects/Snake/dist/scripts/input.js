@@ -7,7 +7,9 @@ const DIRECTIONS = {
 let inputDirection = DIRECTIONS["ArrowRight"];
 
 window.addEventListener("keydown", (e) => {
-    inputDirection = DIRECTIONS[e.key];
+    const tempDirection = DIRECTIONS[e.key];
+    Math.abs(inputDirection.x) - Math.abs(tempDirection.x) &&
+        (inputDirection = DIRECTIONS[e.key]);
 });
 
 export function getInputDirection() {
