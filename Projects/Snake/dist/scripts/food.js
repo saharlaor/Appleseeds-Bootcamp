@@ -1,4 +1,4 @@
-import { getSnakeHead, getSnakeBody } from "./snake.js";
+import { getSnakeHead, onSnake } from "./snake.js";
 
 const food = { x: 1, y: 1 };
 
@@ -21,7 +21,5 @@ export function draw(gameBoard) {
 function randomizeLocation() {
     food.x = Math.ceil(Math.random() * 21);
     food.y = Math.ceil(Math.random() * 21);
-    getSnakeBody().some(
-        (segment) => JSON.stringify(segment) === JSON.stringify(food)
-    ) && randomizeLocation();
+    if (onSnake(food)) randomizeLocation();
 }
