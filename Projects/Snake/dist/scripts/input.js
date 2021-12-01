@@ -1,5 +1,3 @@
-import { difficulty } from "./snake.js";
-
 const DIRECTIONS = {
     ArrowUp: { x: 0, y: -1 },
     ArrowDown: { x: 0, y: 1 },
@@ -9,7 +7,7 @@ const DIRECTIONS = {
 const DIFFICULTY = {
     Easy: { speed: 5, growth: 1 },
     Medium: { speed: 10, growth: 1 },
-    Hard: { speed: 10, growth: 3 },
+    Hard: { speed: 10, growth: 2 },
     Hell: { speed: 15, growth: 3 },
 };
 

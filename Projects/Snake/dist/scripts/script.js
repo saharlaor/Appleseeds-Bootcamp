@@ -14,7 +14,13 @@ let grow = false;
 function main(currentTime) {
     const deathStatus = checkDeath();
     if (deathStatus) {
-        if (confirm(`You lost after eating ${deathStatus - 1}\nPlay Again?`)) {
+        if (
+            confirm(
+                `You finished the game with ${calculatePoints(
+                    deathStatus - 1
+                )} points\nPlay Again?`
+            )
+        ) {
             window.location.reload();
         }
         return;
@@ -45,6 +51,11 @@ function draw() {
     gameBoard.innerHTML = "";
     drawSnake(gameBoard);
     drawFood(gameBoard);
+}
+
+function calculatePoints(snakeLength) {
+    const difficulty = getDifficulty();
+    return snakeLength * difficulty.speed;
 }
 
 document
