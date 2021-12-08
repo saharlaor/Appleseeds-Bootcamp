@@ -1,0 +1,56 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.users__container {
+  display: flex;
+  height: 25rem;
+  width: 100%;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 2px solid #222;
+  overflow-x: scroll;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem;
+  background: lightgray;
+  border-radius: 0.5rem;
+}
+
+.card > * {
+  display: inline-block;
+}
+
+.card > img {
+  height: 250px;
+  margin: 1rem 0.5rem;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__container > * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  padding: 4px;
+}
