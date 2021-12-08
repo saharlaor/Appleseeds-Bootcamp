@@ -54,3 +54,7 @@ body {
   font-size: 32px;
   padding: 4px;
 }
+
+.error__container {
+  color: red;
+}
