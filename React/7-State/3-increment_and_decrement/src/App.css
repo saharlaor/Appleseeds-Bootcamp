@@ -1,0 +1,21 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.green {
+  color: green;
+}
