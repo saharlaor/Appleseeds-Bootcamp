@@ -1,0 +1,17 @@
+#box {
+  margin-bottom: 1rem;
+  background-color: rosybrown;
+}
+
+#box.box-animation {
+  display: block;
+  animation: 1s ease 0s forwards slidein;
+}
+
+@keyframes slidein {
+  from {
+    width: 0px;
+  }
+  to {
+  }
+}
