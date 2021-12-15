@@ -1,0 +1,16 @@
+.Spinner {
+  position: relative;
+  flex-shrink: 0;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 3px solid #777;
+  border-top: 3px solid #3fd;
+  animation: 1s linear 0s infinite running reverse spin;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+}
