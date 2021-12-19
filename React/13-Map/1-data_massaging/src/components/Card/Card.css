@@ -1,0 +1,10 @@
+.Card {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: wheat;
+  border: 1px ridge #000;
+  border-radius: 0.5rem;
+  line-height: 2rem;
+}
+/*# sourceMappingURL=Card.css.map */
