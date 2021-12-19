@@ -1,0 +1,122 @@
+/*******************\
+****** General ******
+\*******************/
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
+/******************\
+****** Blocks ******
+\******************/
+#game-board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+  -ms-grid-rows: (1fr)[21];
+      grid-template-rows: repeat(21, 1fr);
+  background-color: #ccc;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+#difficulty-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  position: absolute;
+  width: 100vmin;
+  height: 100vmin;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #aaa;
+  opacity: 90%;
+}
+
+#difficulty-form h2 {
+  margin: 1rem;
+  font-size: 72px;
+}
+
+#difficulty-form .difficulty__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+#difficulty-form .difficulty__container label {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+#difficulty-form .difficulty__submit {
+  margin-top: 4rem;
+  padding: 2rem 15rem;
+  font-size: 48px;
+}
+
+.snake {
+  background-color: #2b3;
+  border: 0.25vmin solid #000;
+}
+
+.food {
+  background-color: #d33;
+  border: 0.25vmin solid #000;
+}
+
+/********************\
+****** Elements ******
+\********************/
+/*********************\
+****** Modifiers ******
+\*********************/
+/*# sourceMappingURL=styles.css.map */

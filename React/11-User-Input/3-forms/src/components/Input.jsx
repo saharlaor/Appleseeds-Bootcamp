@@ -12,14 +12,8 @@ class Input extends React.Component {
     };
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   console.log(this.state.value);
-  //   console.log(prevState.value);
-  // }
-
   render() {
     let inputEl;
-
     switch (this.state.type) {
       case "textarea":
         inputEl = (
@@ -64,20 +58,6 @@ class Input extends React.Component {
       default:
         break;
     }
-    // inputEl =
-    //   this.state.type === "textarea" ? (
-    //     <textarea
-    //       name={this.state.name}
-    //       id={this.state.name}
-    //       onChange={this.state.onChange}></textarea>
-    //   ) : (
-    //     <input
-    //       type={this.state.type}
-    //       name={this.state.name}
-    //       id={this.state.name}
-    //       onChange={this.state.onChange}
-    //     />
-    //   );
     return (
       <div className="input">
         <label htmlFor={this.state.name}>{this.state.title}</label>

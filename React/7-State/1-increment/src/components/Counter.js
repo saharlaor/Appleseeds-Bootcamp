@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 
 class Counter extends React.Component {
   constructor() {
     super();
     this.state = {
-      value: 0
+      value: 0,
     };
   }
 
   increment() {
-    this.setState({value: this.state.value + 1});
+    this.setState({ value: this.state.value + 1 });
   }
 
   render() {
     return (
-    <div>
+      <div>
         <button onClick={this.increment.bind(this)}>increment</button>
         <span>{this.state.value}</span>
       </div>
@@ -23,7 +23,7 @@ class Counter extends React.Component {
 
   componentDidMount() {
     this.setState({
-      someKey: 'otherValue'
+      someKey: "otherValue",
     });
   }
 }

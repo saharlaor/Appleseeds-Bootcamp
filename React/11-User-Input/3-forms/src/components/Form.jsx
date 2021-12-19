@@ -18,15 +18,10 @@ class Form extends React.Component {
     this.setState({ [name]: value });
   };
 
-  handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-  };
-
   render() {
     console.log(this.state.firstName);
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <form onSubmit={this.props.onSubmit}>
         <Input
           type="text"
           title="First Name"

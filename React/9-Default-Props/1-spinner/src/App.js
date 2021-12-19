@@ -29,7 +29,7 @@ class App extends React.Component {
         timer: prevState.timer - 1,
         show: prevState.timer === 0,
       };
-      this.setState((prevState) => newState);
+      this.setState(newState);
     }, 1000);
   }
 }
