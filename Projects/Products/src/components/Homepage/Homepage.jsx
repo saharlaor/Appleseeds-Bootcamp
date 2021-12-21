@@ -1,8 +1,8 @@
 import React from "react";
-import "./index.css";
+import "./Homepage.css";
 
 function Homepage() {
-  return <div className="Homepage"></div>;
+  return <div className="Homepage">Homepage</div>;
 }
 
 export default Homepage;

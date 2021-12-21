@@ -1,8 +1,8 @@
 import React from "react";
-import "./index.css";
+import "./Header.css";
 
 function Header() {
-  return <div className="Header"></div>;
+  return <div className="Header">wwww</div>;
 }
 
 export default Header;
