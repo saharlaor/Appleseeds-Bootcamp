@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import storeData from "../../store";
 import "./Products.css";
 
@@ -17,9 +18,12 @@ class Products extends React.Component {
     console.log(this.state.productList);
     const productsEls = this.state.productList.map((product) => {
       return (
-        <h3 key={product.id} className="product">
+        <Link
+          key={product.id}
+          to={`/product/${product.id}`}
+          className="product">
           {product.title}
-        </h3>
+        </Link>
       );
     });
     return <div className="Products">{productsEls}</div>;
