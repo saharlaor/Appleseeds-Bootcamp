@@ -1,4 +1,5 @@
 .Header {
-  display: inline-block;
+  display: block;
+  background-color: #999;
 }
 /*# sourceMappingURL=Header.css.map */
