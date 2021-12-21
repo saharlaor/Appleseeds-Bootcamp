@@ -1,4 +1,4 @@
-export default [
+const products = [
   {
     title: "Stylish hat",
     imageUrl: "https://i.ibb.co/pPSQYfX/hat.jpg",
@@ -28,3 +28,5 @@ export default [
     id: 4,
   },
 ];
+
+export default products;

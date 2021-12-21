@@ -15,7 +15,6 @@ class Products extends React.Component {
   }
 
   render() {
-    console.log(this.state.productList);
     const productsEls = this.state.productList.map((product) => {
       return (
         <Link
@@ -26,7 +25,12 @@ class Products extends React.Component {
         </Link>
       );
     });
-    return <div className="Products">{productsEls}</div>;
+    return (
+      <div className="Products">
+        <button onClick={() => this.props.history.goBack()}>Back</button>
+        {productsEls}
+      </div>
+    );
   }
 }
 

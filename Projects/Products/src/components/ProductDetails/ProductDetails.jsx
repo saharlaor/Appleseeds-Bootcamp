@@ -23,13 +23,13 @@ class ProductDetails extends React.Component {
   }
 
   render() {
-    console.log(storeData);
     return (
       <div className="ProductDetails">
+        <button onClick={() => this.props.history.goBack()}>Back</button>
         {this.state.id && (
           <>
             <h2>{this.state.title}</h2>
-            <img src={this.state.imageUrl} alt="Product image" />
+            <img src={this.state.imageUrl} alt="Product" />
             <p>
               Price: {this.state.price}
               <br />

@@ -1,5 +1,9 @@
 .Header {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
   background-color: #999;
 }
 /*# sourceMappingURL=Header.css.map */
