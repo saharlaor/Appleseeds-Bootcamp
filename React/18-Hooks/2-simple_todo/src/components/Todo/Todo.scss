@@ -1,0 +1,12 @@
+.Todo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 1rem;
+  & > .incomplete {
+    text-decoration: line-through;
+  }
+  button {
+    border-radius: 5px;
+  }
+}
