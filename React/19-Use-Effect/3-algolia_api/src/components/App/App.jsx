@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import algolia from "../../api/algolia";
+import Spinner from "../Spinner/Spinner";
 import "./App.css";
 
 function App() {
   const [query, setQuery] = useState("hooks");
   const [term, setTerm] = useState("hooks");
   const [results, setResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
+      setIsLoading(true);
       const {
         data: { hits },
       } = await algolia.get("", {
@@ -21,7 +24,7 @@ function App() {
           return { title: hit.title, url: hit.url, id: hit.objectID };
         })
       );
-      console.log(`hits`, hits);
+      setIsLoading(false);
     })();
   }, [query]);
 
@@ -43,6 +46,7 @@ function App() {
         onChange={(e) => setTerm(e.target.value)}
       />
       <button onClick={() => setQuery(term)}>Search</button>
+      {isLoading && <Spinner />}
       <ul>{generateListItems()}</ul>
     </div>
   );

@@ -1,4 +1,25 @@
 .App {
   display: inline-block;
+  height: 100vh;
+  width: 100%;
+  background: #333;
+  color: #eee;
+}
+
+.App input {
+  margin: 1rem 0 0 1.5rem;
+  font-size: 20px;
+}
+
+.App button {
+  font-size: 20px;
+}
+
+.App a {
+  color: #66f;
+}
+
+.App a:visited {
+  color: #f66;
 }
 /*# sourceMappingURL=App.css.map */
