@@ -8,22 +8,28 @@ function App() {
   const [term, setTerm] = useState("hooks");
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const {
-        data: { hits },
-      } = await algolia.get("", {
-        params: {
-          query: query,
-        },
-      });
-      setResults(
-        hits.map((hit) => {
-          return { title: hit.title, url: hit.url, id: hit.objectID };
-        })
-      );
+      try {
+        const {
+          data: { hits },
+        } = await algolia.get("", {
+          params: {
+            query: query,
+          },
+        });
+        setResults(
+          hits.map((hit) => {
+            return { title: hit.title, url: hit.url, id: hit.objectID };
+          })
+        );
+        setError("");
+      } catch (err) {
+        setError(err);
+      }
       setIsLoading(false);
     })();
   }, [query]);
@@ -47,7 +53,11 @@ function App() {
       />
       <button onClick={() => setQuery(term)}>Search</button>
       {isLoading && <Spinner />}
-      <ul>{generateListItems()}</ul>
+      {error ? (
+        <div className="Error">error</div>
+      ) : (
+        <ul>{generateListItems()}</ul>
+      )}
     </div>
   );
 }
