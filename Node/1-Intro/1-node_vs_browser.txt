@@ -1,0 +1,10 @@
+NodeJS assets:
+- global and process object
+- No DOM to manipulate
+- Basic operations are async
+- Works directly on the file system
+
+Browser assets:
+- window and document objects
+- ES6 module system
+- localStorage
