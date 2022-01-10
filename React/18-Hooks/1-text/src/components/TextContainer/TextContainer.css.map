@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,YAAY;CACtB",
+    "sources": [
+        "TextContainer.scss"
+    ],
+    "names": [],
+    "file": "TextContainer.css"
+}
