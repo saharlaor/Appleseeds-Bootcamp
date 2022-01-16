@@ -16,18 +16,18 @@ function Home() {
     setMessage1("Loading...");
     setMessage2("");
 
-    fetch("http://localhost:8001/api/weather?address=" + location).then(
-      (response) => {
-        response.json().then((data) => {
-          if (data.error) {
-            setMessage1(data.error);
-          } else {
-            setMessage1(data.location);
-            setMessage2(data.forecast);
-          }
-        });
-      }
-    );
+    fetch(
+      "https://sahar-weather-api.herokuapp.com/api/weather?address=" + location
+    ).then((response) => {
+      response.json().then((data) => {
+        if (data.error) {
+          setMessage1(data.error);
+        } else {
+          setMessage1(data.location);
+          setMessage2(data.forecast);
+        }
+      });
+    });
   };
 
   return (

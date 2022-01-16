@@ -3,6 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const { geocode, forecast } = require("./utils/utils");
 
+// Constants
+const PORT = process.env.PORT || 8001;
+
 const app = express();
 
 // Define paths for Express config
@@ -10,6 +13,8 @@ const publicDirectoryPath = path.join(__dirname, "../../client/public");
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
+
+// Setup cors handler
 app.use(cors());
 app.options("*", cors());
 
@@ -42,6 +47,6 @@ app.get("/api/weather", (req, res) => {
   );
 });
 
-app.listen(8001, () => {
-  console.log("Server is up on port 8001.");
+app.listen(PORT, () => {
+  console.log(`Server is up on port ${PORT}.`);
 });
