@@ -39,16 +39,25 @@ async function addPosts(postArr) {
 
 async function addComment(title, content, postId, authorId) {
   const collection = client.db("blog").collection("comments");
+  const postsCollection = client.db("blog").collection("posts");
 
   try {
-    await collection.insertOne({
+    const { insertedId } = await collection.insertOne({
       title,
       content,
       postId,
       authorId,
       createdDate: new Date(),
     });
-  } catch (err) {}
+    console.log(`insertedId`, insertedId);
+    const result = await postsCollection.updateOne(
+      { _id: postId },
+      { $push: { comments: insertedId } }
+    );
+    console.log(`result`, result);
+  } catch (err) {
+    console.log(`err`, err);
+  }
 }
 
 async function main() {
