@@ -22,6 +22,21 @@ async function addUsers(nameArr) {
   }
 }
 
+async function addPosts(postArr) {
+  const collection = client.db("blog").collection("posts");
+
+  // Set a unique name index
+  await collection.createIndex({ title: 1 }, { unique: true });
+  try {
+    await Promise.allSettled(
+      postArr.map((postDetails) => {
+        const post = { ...postDetails, comments: [], createdDate: new Date() };
+        return collection.insertOne(post);
+      })
+    );
+  } catch (err) {}
+}
+
 async function main() {
   try {
     // Connect the client to the server
@@ -31,6 +46,19 @@ async function main() {
     console.log("Connected successfully to server");
 
     await addUsers(["Pini Hodadad", "Timmmmmmmmy"]);
+
+    await addPosts([
+      {
+        title: "Post1",
+        content: "This is the first post",
+        authorId: ObjectId("61e6a81b688a0d33e30db749"),
+      },
+      {
+        title: "Post2",
+        content: "This is the second post, hooray!",
+        authorId: ObjectId("61e6b197bcb245b681c783ac"),
+      },
+    ]);
   } catch (err) {
     console.log(
       `There was a problem with connecting to the MongoDB server\n\n${err}`
