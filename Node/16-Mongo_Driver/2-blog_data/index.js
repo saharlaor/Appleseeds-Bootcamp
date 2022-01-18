@@ -37,6 +37,20 @@ async function addPosts(postArr) {
   } catch (err) {}
 }
 
+async function addComment(title, content, postId, authorId) {
+  const collection = client.db("blog").collection("comments");
+
+  try {
+    await collection.insertOne({
+      title,
+      content,
+      postId,
+      authorId,
+      createdDate: new Date(),
+    });
+  } catch (err) {}
+}
+
 async function main() {
   try {
     // Connect the client to the server
@@ -59,6 +73,13 @@ async function main() {
         authorId: ObjectId("61e6b197bcb245b681c783ac"),
       },
     ]);
+
+    await addComment(
+      "My First Comment",
+      "This post is the first post and I am commenting on it",
+      ObjectId("61e6b5a46420a093e482c654"),
+      ObjectId("61e6b197bcb245b681c783ac")
+    );
   } catch (err) {
     console.log(
       `There was a problem with connecting to the MongoDB server\n\n${err}`
